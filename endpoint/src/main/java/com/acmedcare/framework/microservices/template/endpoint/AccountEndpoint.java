@@ -81,8 +81,10 @@ public class AccountEndpoint {
       log.error("查询用户处理异常", e);
       return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(EntityBody.exception(e));
     } catch (InvalidRequestParameterException e) {
+      log.error("请求参数异常", e);
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(EntityBody.exception(e));
     } catch (Throwable e) {
+      log.error("异常", e);
       return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(EntityBody.exception(e));
     }
   }
