@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.acmedcare.framework</groupId>
+        <artifactId>microservices-template-all</artifactId>
+        <version>2.1.0.BUILD-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>microservices-repository</artifactId>
+    <version>2.1.0.BUILD-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Acmedcare+ Micro-services Project Repository Module :: ${project.version}</name>
+    <description>🏗 Acmedcare+ Repository Module</description>
+
+
+
+    <modules>
+        <module>repository-api</module>
+        <module>repository-jdbc</module>
+    </modules>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>microservices-repository-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>microservices-repository-jdbc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

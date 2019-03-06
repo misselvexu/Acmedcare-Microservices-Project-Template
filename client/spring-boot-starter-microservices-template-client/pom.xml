@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.acmedcare.framework</groupId>
+        <artifactId>microservices-client</artifactId>
+        <version>2.1.0.BUILD-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>microservices-spring-boot-starter-client</artifactId>
+    <version>2.1.0.BUILD-SNAPSHOT</version>
+
+    <name>Acmedcare+ Micro-services Project Spring Boot Starter Client Module :: ${project.version}</name>
+    <description>🏗 Acmedcare+ Spring Boot Starter Client Module</description>
+
+
+    <dependencies>
+
+        <!-- Normal Libs -->
+        <dependency>
+            <groupId>com.acmedcare.framework</groupId>
+            <artifactId>microservices-client-core</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Starter Support -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure-processor</artifactId>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>
