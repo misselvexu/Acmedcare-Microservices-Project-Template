@@ -61,14 +61,15 @@ public class AccountEndpoint {
 
       log.info("请求获取用户详情, 请求参数:{} ", passport);
 
-      // check params
+      // 参数检查
       if (StringUtils.isBlank(passport)) {
         throw new InvalidRequestParameterException("请求参数['passport']不能为空");
       }
 
-      // query account
+      // 业务执行
       Account account = this.accountService.queryAccount(passport);
 
+      // 结果校验
       if (account == null) {
         return ResponseEntity.notFound().build();
       }
@@ -77,6 +78,7 @@ public class AccountEndpoint {
 
       return ResponseEntity.ok(accountResponse);
 
+      // 异常处理
     } catch (BizException e) {
       log.error("查询用户处理异常", e);
       return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(EntityBody.exception(e));
