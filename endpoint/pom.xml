@@ -38,6 +38,22 @@
         <dependency>
             <groupId>com.acmedcare.framework</groupId>
             <artifactId>microservices-repository-jdbc</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.acmedcare.framework</groupId>
+            <artifactId>microservices-repository-mybatis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <!-- Spring Boot Web Support -->

@@ -158,6 +158,12 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>microservices-repository-mybatis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- Spring Cloud Dependency  -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

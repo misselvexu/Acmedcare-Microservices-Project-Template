@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.acmedcare.framework</groupId>
+        <artifactId>microservices-distribution</artifactId>
+        <version>2.1.0.BUILD-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>microservices-spring-cloud-app</artifactId>
+    <version>2.1.0.BUILD-SNAPSHOT</version>
+
+    <name>Acmedcare+ Micro-services Project Spring Cloud Distribution Module :: ${project.version}</name>
+    <description>🏗 Acmedcare+ Spring Cloud Distribution Module</description>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.acmedcare.framework</groupId>
+            <artifactId>spring-boot-starter-acmedcare-banner</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.acmedcare.framework</groupId>
+            <artifactId>microservices-endpoint</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>xyz.vopen.tiffany</groupId>
+            <artifactId>spring-boot-starter-swagger</artifactId>
+        </dependency>
+
+        <!-- Spring Cloud Libs -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Server libs -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+
+        <!-- JDBC Maven libs -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
