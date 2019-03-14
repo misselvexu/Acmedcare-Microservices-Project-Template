@@ -20,7 +20,7 @@
 
     <modules>
         <module>repository-api</module>
-        <module>repository-jdbc</module>
+        <!--<module>repository-jdbc</module>-->
         <module>repository-mybatis</module>
     </modules>
 
@@ -32,11 +32,13 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <!--
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>microservices-repository-jdbc</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            -->
 
             <dependency>
                 <groupId>${project.groupId}</groupId>

@@ -3,6 +3,8 @@ package com.acmedcare.framework.microservices.template.endpoint.service;
 import com.acmedcare.framework.microservices.template.bean.Account;
 import com.acmedcare.framework.microservices.template.common.exception.BizException;
 import com.acmedcare.framework.microservices.template.repository.AccountRepository;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +15,7 @@ import org.springframework.stereotype.Service;
  * @version ${project.version} - 2019-03-06.
  */
 @Service
-public class AccountService {
+public class AccountService extends ServiceImpl<AccountRepository, Account> {
 
   private final AccountRepository accountRepository;
 
@@ -30,6 +32,18 @@ public class AccountService {
    */
   public Account queryAccount(String passport) throws BizException {
     try {
+      QueryWrapper<Account> queryWrapper = new QueryWrapper<>();
+      queryWrapper.eq("passport", passport);
+
+      System.out.println("Mapper instance :" + this.baseMapper);
+      System.out.println("Repository instance :" + this.accountRepository);
+
+      Account account = this.baseMapper.selectOne(queryWrapper);
+      System.out.println("Account-1: " + account.toString());
+
+      account = this.baseMapper.queryAccount(passport);
+      System.out.println("Account-2: " + account.toString());
+
       return this.accountRepository.queryAccount(passport);
     } catch (Exception e) {
       throw new BizException(e);

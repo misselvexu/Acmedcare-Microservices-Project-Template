@@ -35,11 +35,13 @@
         </dependency>
 
         <!-- jdbc implements -->
+        <!--
         <dependency>
             <groupId>com.acmedcare.framework</groupId>
             <artifactId>microservices-repository-jdbc</artifactId>
             <optional>true</optional>
         </dependency>
+        -->
 
         <dependency>
             <groupId>com.acmedcare.framework</groupId>

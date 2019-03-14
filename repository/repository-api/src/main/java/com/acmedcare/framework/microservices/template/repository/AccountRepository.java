@@ -2,6 +2,7 @@ package com.acmedcare.framework.microservices.template.repository;
 
 import com.acmedcare.framework.microservices.template.bean.Account;
 import com.acmedcare.framework.microservices.template.common.exception.RepositoryException;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * {@link AccountRepository} Methods Defined
@@ -10,7 +11,7 @@ import com.acmedcare.framework.microservices.template.common.exception.Repositor
  * @version ${project.version} - 2019-03-06.
  */
 @SuppressWarnings("unused")
-public interface AccountRepository {
+public interface AccountRepository extends BaseMapper<Account> {
 
   /**
    * Query {@link Account} by passport

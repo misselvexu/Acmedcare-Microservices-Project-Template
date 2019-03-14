@@ -22,6 +22,12 @@
             <groupId>com.acmedcare.framework</groupId>
             <artifactId>microservices-common</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-annotation</artifactId>
+            <version>3.1.0</version>
+        </dependency>
     </dependencies>
 
 
