@@ -4,16 +4,9 @@ import com.acmedcare.framework.microservices.template.bean.Account;
 import com.acmedcare.framework.microservices.template.common.Constants;
 import com.acmedcare.framework.microservices.template.common.exception.RepositoryException;
 import com.acmedcare.framework.microservices.template.repository.AccountRepository;
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
 
 /**
  * AccountJDBCRepository
