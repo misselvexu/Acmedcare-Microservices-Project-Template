@@ -173,6 +173,15 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- Spring Cloud Alibaba -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>0.2.1.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- Spring Boot Dependency  -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
