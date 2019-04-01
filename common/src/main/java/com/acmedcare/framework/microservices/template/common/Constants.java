@@ -10,13 +10,6 @@ package com.acmedcare.framework.microservices.template.common;
 public final class Constants {
 
   /**
-   * 项目服务名称,用于注册到注册中心使用
-   *
-   * <p>
-   */
-  public static final String PROJECT_SERVICE_NAMESPACE = "Acmedcare-Microservice-Project-Template";
-
-  /**
    * {@link AccountStatus} defined
    *
    * @since ${project.version}

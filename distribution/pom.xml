@@ -5,12 +5,12 @@
     <parent>
         <groupId>com.acmedcare.framework</groupId>
         <artifactId>microservices-template-all</artifactId>
-        <version>2.1.0.BUILD-SNAPSHOT</version>
+        <version>2.1.1.BUILD-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>microservices-distribution</artifactId>
-    <version>2.1.0.BUILD-SNAPSHOT</version>
+    <version>2.1.1.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Acmedcare+ Micro-services Project Distribution Module :: ${project.version}</name>
@@ -20,6 +20,11 @@
         <module>spring-boot-app</module>
         <module>spring-cloud-app</module>
     </modules>
+
+    <properties>
+        <!-- Deploy Properties -->
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
 
 
     <dependencyManagement>

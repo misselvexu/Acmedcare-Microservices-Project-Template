@@ -5,16 +5,20 @@
     <parent>
         <groupId>com.acmedcare.framework</groupId>
         <artifactId>microservices-repository</artifactId>
-        <version>2.1.0.BUILD-SNAPSHOT</version>
+        <version>2.1.1.BUILD-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>microservices-repository-api</artifactId>
-    <version>2.1.0.BUILD-SNAPSHOT</version>
+    <version>2.1.1.BUILD-SNAPSHOT</version>
 
     <name>Acmedcare+ Micro-services Project Repository Api Module :: ${project.version}</name>
     <description>🏗 Acmedcare+ Repository Api Module</description>
 
+    <properties>
+        <!-- Deploy Properties -->
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
 
     <dependencies>
 
@@ -34,7 +38,6 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-core</artifactId>
-            <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
 

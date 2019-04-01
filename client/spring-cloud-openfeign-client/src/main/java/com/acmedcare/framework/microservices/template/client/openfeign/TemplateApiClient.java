@@ -1,7 +1,6 @@
 package com.acmedcare.framework.microservices.template.client.openfeign;
 
 import com.acmedcare.framework.microservices.template.client.openfeign.configuration.DefaultFeginConfiguration;
-import com.acmedcare.framework.microservices.template.common.Constants;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,18 +14,17 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @version ${project.version} - 2019-03-06.
  */
 @FeignClient(
-    name = Constants.PROJECT_SERVICE_NAMESPACE,
+    name = ClientProperties.PROJECT_SERVICE_NAMESPACE,
     configuration = DefaultFeginConfiguration.class)
 public interface TemplateApiClient {
 
   /**
+   * Query account detail by passport
    *
-   * @param passport
-   * @return
+   * @param passport passport
+   * @return {@link com.acmedcare.framework.microservices.template.bean.Account} instance json
+   *     response
    */
   @GetMapping(value = "/{passport}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   ResponseEntity queryAccount(@PathVariable("passport") String passport);
-
-
-
 }

@@ -5,15 +5,20 @@
     <parent>
         <groupId>com.acmedcare.framework</groupId>
         <artifactId>microservices-distribution</artifactId>
-        <version>2.1.0.BUILD-SNAPSHOT</version>
+        <version>2.1.1.BUILD-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>microservices-spring-cloud-app</artifactId>
-    <version>2.1.0.BUILD-SNAPSHOT</version>
+    <version>2.1.1.BUILD-SNAPSHOT</version>
 
     <name>Acmedcare+ Micro-services Project Spring Cloud Distribution Module :: ${project.version}</name>
     <description>🏗 Acmedcare+ Spring Cloud Distribution Module</description>
+
+    <properties>
+        <!-- Deploy Properties -->
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
 
     <dependencies>
 

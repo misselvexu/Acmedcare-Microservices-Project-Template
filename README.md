@@ -11,15 +11,11 @@
 ├── CHANGELOG.md                                            #   版本发布日志
 ├── LICENSE                                                 #   版权
 ├── README.md                                               #   项目描述文件
+│
 ├── api                                                     #   项目基础模块:定义实体,接口等等
 ├── client                                                  #   客户端用于第三方调用/服务间通讯/SDK等等
-│   ├── client-core                                         #   客户端核心实现
-│   ├── client-samples                                      #   客户端使用案例集合
-│   │   ├── client-sample                                       #   核心包使用案例
-│   │   ├── spring-boot-starter-client-sample                   #   客户端Spring Boot Starter案例
-│   │   └── spring-cloud-starter-client-sample                  #   客户端Spring Cloud Starter案例
-│   ├── spring-boot-starter-microservices-template-client   #   客户端`Spring Boot Starter`模块
-│   └── spring-cloud-openfeign-client                       #   客户端`Spring Cloud OpenFeign Client Starter`模块
+│   ├── spring-cloud-openfeign-client                       #   服务间调用的Client依赖模块
+│   └── spring-cloud-openfeign-client-sample                #   服务间调用的Client的 demo模块
 │       
 ├── common                                                  #   项目公共模块:定义工具类,常量等等
 │   
@@ -37,7 +33,7 @@
 │   ├── repository-api                                       │   ├── 项目持久化接口模块
 │   └── repository-jdbc                                      └───────└── 持久化 Simple JDBC 实现
 │
-│── test                                                    #   项目集成测试模块
+├── test                                                    #   项目集成测试模块
 └── pom.xml
 
 ```
