@@ -14,6 +14,6 @@ public final class ClientProperties {
    *
    * <p>
    */
-  public static final String PROJECT_SERVICE_NAMESPACE = "Acmedcare-Microservice-Project-Template";
+  public static final String PROJECT_SERVICE_NAMESPACE = "Template-Spring-Cloud-Application";
 
 }

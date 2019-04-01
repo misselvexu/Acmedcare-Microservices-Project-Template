@@ -1,6 +1,7 @@
 package com.acmedcare.framework.microservices.template.client.openfeign;
 
 import com.acmedcare.framework.microservices.template.client.openfeign.configuration.DefaultFeginConfiguration;
+import com.acmedcare.framework.microservices.template.response.AccountResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +26,6 @@ public interface TemplateApiClient {
    * @return {@link com.acmedcare.framework.microservices.template.bean.Account} instance json
    *     response
    */
-  @GetMapping(value = "/{passport}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-  ResponseEntity queryAccount(@PathVariable("passport") String passport);
+  @GetMapping(value = "/account/{passport}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+  ResponseEntity<AccountResponse> queryAccount(@PathVariable("passport") String passport);
 }

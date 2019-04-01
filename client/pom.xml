@@ -35,6 +35,12 @@
                 <artifactId>microservices-openfeign-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.acmedcare.framework</groupId>
+                <artifactId>microservices-client-sample</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
