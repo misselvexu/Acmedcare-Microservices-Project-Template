@@ -48,6 +48,25 @@ Acmedcare+ Maven Repository Configuration
 
 You can download binaries from [Release Repo](http://115.29.47.72:8082/acmedback/Acmedcare-Microservices-Project-Template/tree/master/release) or [repo.acmedcare.com](http://47.97.26.165:8081/repository/maven-public/).
 
+*First* : unzip release package
+
+```bash
+$ tar -zxvf *.tar.gz
+```
+
+*Second* : startup & shutdown
+
+```bash
+$ sh ./bin/startup.sh -p production  
+```
+
+*Third* : check the application log
+
+```bash
+$ tail -f logs/start.log
+```
+
+> param: -p (optional): `production` | `dev`
 
 
 ### Building from Source
