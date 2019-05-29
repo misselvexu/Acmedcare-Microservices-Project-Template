@@ -26,6 +26,6 @@ public interface TemplateApiClient {
    * @return {@link com.acmedcare.framework.microservices.template.bean.Account} instance json
    *     response
    */
-  @GetMapping(value = "/account/{passport}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+  @GetMapping(value = "/account/{passport}", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
   ResponseEntity<AccountResponse> queryAccount(@PathVariable("passport") String passport);
 }

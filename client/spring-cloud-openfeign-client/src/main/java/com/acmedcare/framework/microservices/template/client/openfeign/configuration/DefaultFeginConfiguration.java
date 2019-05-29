@@ -68,7 +68,7 @@ public class DefaultFeginConfiguration {
 
   @Bean
   public ErrorDecoder errorNormalDecoder() {
-    return new AorpFeignErrorDecoder();
+    return new FeignErrorDecoder();
   }
 
   @ConditionalOnProperty(name = "feign.hystrix.enabled", matchIfMissing = true)
@@ -90,7 +90,7 @@ public class DefaultFeginConfiguration {
     }
   }
 
-  public static class AorpFeignErrorDecoder implements ErrorDecoder {
+  public static class FeignErrorDecoder implements ErrorDecoder {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
     @Override
