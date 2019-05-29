@@ -1,7 +1,7 @@
 package com.acmedcare.framework.microservices.template.repository;
 
 import com.acmedcare.framework.microservices.template.bean.Account;
-import com.acmedcare.framework.microservices.template.common.exception.RepositoryException;
+import com.acmedcare.framework.microservices.template.exception.RepositoryException;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

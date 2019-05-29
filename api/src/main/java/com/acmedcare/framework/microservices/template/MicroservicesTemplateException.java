@@ -1,22 +1,22 @@
-package com.acmedcare.framework.microservices.template.common.exception;
+package com.acmedcare.framework.microservices.template;
 
 import java.security.PrivilegedActionException;
 
 /**
- * RepositoryException
+ * {@link MicroservicesTemplateException}
  *
  * @author <a href="mailto:iskp.me@gmail.com">Elve.Xu</a>
  * @version ${project.version} - 2019-03-06.
  */
-public class RepositoryException extends MicroservicesTemplateException {
+public class MicroservicesTemplateException extends Exception {
 
-  private static final long serialVersionUID = -61761775214897870L;
+  private static final long serialVersionUID = 3940104996304932504L;
 
   /**
    * Constructs a new exception with {@code null} as its detail message. The cause is not
    * initialized, and may subsequently be initialized by a call to {@link #initCause}.
    */
-  public RepositoryException() {}
+  public MicroservicesTemplateException() {}
 
   /**
    * Constructs a new exception with the specified detail message. The cause is not initialized, and
@@ -25,7 +25,7 @@ public class RepositoryException extends MicroservicesTemplateException {
    * @param message the detail message. The detail message is saved for later retrieval by the
    *     {@link #getMessage()} method.
    */
-  public RepositoryException(String message) {
+  public MicroservicesTemplateException(String message) {
     super(message);
   }
 
@@ -42,7 +42,7 @@ public class RepositoryException extends MicroservicesTemplateException {
    *     unknown.)
    * @since 1.4
    */
-  public RepositoryException(String message, Throwable cause) {
+  public MicroservicesTemplateException(String message, Throwable cause) {
     super(message, cause);
   }
 
@@ -57,7 +57,7 @@ public class RepositoryException extends MicroservicesTemplateException {
    *     unknown.)
    * @since 1.4
    */
-  public RepositoryException(Throwable cause) {
+  public MicroservicesTemplateException(Throwable cause) {
     super(cause);
   }
 }

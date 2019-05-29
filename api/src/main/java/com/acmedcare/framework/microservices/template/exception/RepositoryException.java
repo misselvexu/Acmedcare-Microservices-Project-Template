@@ -1,20 +1,24 @@
-package com.acmedcare.framework.microservices.template.common.exception;
+package com.acmedcare.framework.microservices.template.exception;
+
+import com.acmedcare.framework.microservices.template.MicroservicesTemplateException;
+
+import java.security.PrivilegedActionException;
 
 /**
- * BizException
+ * RepositoryException
  *
  * @author <a href="mailto:iskp.me@gmail.com">Elve.Xu</a>
  * @version ${project.version} - 2019-03-06.
  */
-public class BizException extends MicroservicesTemplateException {
+public class RepositoryException extends MicroservicesTemplateException {
 
-  private static final long serialVersionUID = 2141090056072842191L;
+  private static final long serialVersionUID = -61761775214897870L;
 
   /**
    * Constructs a new exception with {@code null} as its detail message. The cause is not
    * initialized, and may subsequently be initialized by a call to {@link #initCause}.
    */
-  public BizException() {}
+  public RepositoryException() {}
 
   /**
    * Constructs a new exception with the specified detail message. The cause is not initialized, and
@@ -23,7 +27,7 @@ public class BizException extends MicroservicesTemplateException {
    * @param message the detail message. The detail message is saved for later retrieval by the
    *     {@link #getMessage()} method.
    */
-  public BizException(String message) {
+  public RepositoryException(String message) {
     super(message);
   }
 
@@ -40,7 +44,7 @@ public class BizException extends MicroservicesTemplateException {
    *     unknown.)
    * @since 1.4
    */
-  public BizException(String message, Throwable cause) {
+  public RepositoryException(String message, Throwable cause) {
     super(message, cause);
   }
 
@@ -48,14 +52,14 @@ public class BizException extends MicroservicesTemplateException {
    * Constructs a new exception with the specified cause and a detail message of <tt>(cause==null ?
    * null : cause.toString())</tt> (which typically contains the class and detail message of
    * <tt>cause</tt>). This constructor is useful for exceptions that are little more than wrappers
-   * for other throwables (for example, {@link java.security.PrivilegedActionException}).
+   * for other throwables (for example, {@link PrivilegedActionException}).
    *
    * @param cause the cause (which is saved for later retrieval by the {@link #getCause()} method).
    *     (A <tt>null</tt> value is permitted, and indicates that the cause is nonexistent or
    *     unknown.)
    * @since 1.4
    */
-  public BizException(Throwable cause) {
+  public RepositoryException(Throwable cause) {
     super(cause);
   }
 }

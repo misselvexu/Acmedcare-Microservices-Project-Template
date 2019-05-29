@@ -3,7 +3,7 @@ package com.acmedcare.framework.microservices.template.endpoint;
 import com.acmedcare.framework.exception.entity.EntityBody;
 import com.acmedcare.framework.kits.StringUtils;
 import com.acmedcare.framework.microservices.template.bean.Account;
-import com.acmedcare.framework.microservices.template.common.exception.BizException;
+import com.acmedcare.framework.microservices.template.exception.BizException;
 import com.acmedcare.framework.microservices.template.common.log.LogDefined;
 import com.acmedcare.framework.microservices.template.endpoint.exception.InvalidRequestParameterException;
 import com.acmedcare.framework.microservices.template.endpoint.service.AccountService;

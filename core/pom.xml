@@ -22,11 +22,13 @@
 
     <dependencies>
 
+        <!-- Log -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
 
+        <!-- Module Libs -->
         <dependency>
             <groupId>com.acmedcare.framework</groupId>
             <artifactId>microservices-api</artifactId>
@@ -37,6 +39,7 @@
             <artifactId>microservices-common</artifactId>
         </dependency>
 
+        <!-- Common Kits -->
         <dependency>
             <groupId>com.acmedcare.framework.kits</groupId>
             <artifactId>common-kits</artifactId>
@@ -45,6 +48,13 @@
         <dependency>
             <groupId>com.acmedcare.framework</groupId>
             <artifactId>exception-api</artifactId>
+        </dependency>
+
+        <!-- Spring Web Context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

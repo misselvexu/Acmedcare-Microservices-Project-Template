@@ -1,6 +1,6 @@
 package com.acmedcare.framework.microservices.template.exception;
 
-import com.acmedcare.framework.microservices.template.common.exception.MicroservicesTemplateException;
+import com.acmedcare.framework.microservices.template.MicroservicesTemplateException;
 
 import java.security.PrivilegedActionException;
 

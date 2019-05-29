@@ -1,6 +1,6 @@
 package com.acmedcare.framework.microservices.template.client.openfeign.exception;
 
-import com.acmedcare.framework.microservices.template.common.exception.MicroservicesTemplateException;
+import com.acmedcare.framework.microservices.template.MicroservicesTemplateException;
 
 /**
  * {@link ApiClientException}

@@ -23,11 +23,6 @@
     <dependencies>
         <!-- common lib -->
         <dependency>
-            <groupId>com.acmedcare.framework</groupId>
-            <artifactId>microservices-common</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-annotation</artifactId>
             <scope>provided</scope>

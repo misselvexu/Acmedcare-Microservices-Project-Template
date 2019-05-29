@@ -1,7 +1,7 @@
 package com.acmedcare.framework.microservices.template.endpoint.service;
 
 import com.acmedcare.framework.microservices.template.bean.Account;
-import com.acmedcare.framework.microservices.template.common.exception.BizException;
+import com.acmedcare.framework.microservices.template.exception.BizException;
 import com.acmedcare.framework.microservices.template.repository.AccountRepository;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
