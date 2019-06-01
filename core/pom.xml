@@ -45,11 +45,6 @@
             <artifactId>common-kits</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.acmedcare.framework</groupId>
-            <artifactId>exception-api</artifactId>
-        </dependency>
-
         <!-- Spring Web Context -->
         <dependency>
             <groupId>org.springframework</groupId>

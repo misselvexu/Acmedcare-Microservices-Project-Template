@@ -1,14 +1,12 @@
 package com.acmedcare.framework.microservices.template.client.openfeign.exception;
 
-import com.acmedcare.framework.microservices.template.MicroservicesTemplateException;
-
 /**
  * {@link ApiClientException}
  *
  * @author <a href="mailto:iskp.me@gmail.com">Elve.Xu</a>
  * @version ${project.version} - 2019-03-06.
  */
-public class ApiClientException extends MicroservicesTemplateException {
+public class ApiClientException extends Exception {
 
   private static final long serialVersionUID = 1633440603450493754L;
 

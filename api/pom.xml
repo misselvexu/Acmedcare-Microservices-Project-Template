@@ -46,6 +46,16 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.acmedcare.framework</groupId>
+            <artifactId>commons-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.acmedcare.framework</groupId>
+            <artifactId>exception-api</artifactId>
+        </dependency>
+
     </dependencies>
 
 

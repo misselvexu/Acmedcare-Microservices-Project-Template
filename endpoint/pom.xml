@@ -39,11 +39,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.acmedcare.framework</groupId>
-            <artifactId>microservices-repository-mybatis</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
@@ -67,5 +62,16 @@
 
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.acmedcare.framework</groupId>
+                <artifactId>microservices-repository</artifactId>
+                <version>${project.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

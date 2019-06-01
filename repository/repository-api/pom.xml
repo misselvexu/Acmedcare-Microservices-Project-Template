@@ -29,6 +29,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.acmedcare.framework</groupId>
+            <artifactId>microservices-repository-mybatis-support</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
             <scope>provided</scope>

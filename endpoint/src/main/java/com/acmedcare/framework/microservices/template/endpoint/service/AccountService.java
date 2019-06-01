@@ -1,10 +1,12 @@
 package com.acmedcare.framework.microservices.template.endpoint.service;
 
+import com.acmedcare.framework.exception.defined.BizServiceException;
+import com.acmedcare.framework.exception.defined.RepositoryException;
 import com.acmedcare.framework.microservices.template.bean.Account;
-import com.acmedcare.framework.microservices.template.exception.BizException;
 import com.acmedcare.framework.microservices.template.repository.AccountRepository;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AccountService extends ServiceImpl<AccountRepository, Account> {
+
+  private static final Logger log = LoggerFactory.getLogger(AccountService.class);
 
   private final AccountRepository accountRepository;
 
@@ -30,23 +34,17 @@ public class AccountService extends ServiceImpl<AccountRepository, Account> {
    * @param passport passport
    * @return a instance of {@link Account}
    */
-  public Account queryAccount(String passport) throws BizException {
+  public Account queryAccount(String passport) throws BizServiceException {
     try {
-      QueryWrapper<Account> queryWrapper = new QueryWrapper<>();
-      queryWrapper.eq("passport", passport);
-
-      System.out.println("Mapper instance :" + this.baseMapper);
-      System.out.println("Repository instance :" + this.accountRepository);
-
-      Account account = this.baseMapper.selectOne(queryWrapper);
-      System.out.println("Account-1: " + account.toString());
-
-      account = this.baseMapper.queryAccount(passport);
-      System.out.println("Account-2: " + account.toString());
 
       return this.accountRepository.queryAccount(passport);
+    } catch (RepositoryException e) {
+      log.error("账号业务数据库操作异常", e);
+      // catch repository exception , wrapped with biz service exception
+      throw new BizServiceException(e.getMessage());
     } catch (Exception e) {
-      throw new BizException(e);
+      log.error("账号业务处理异常", e);
+      throw new BizServiceException("账号业务处理异常:" + e.getMessage());
     }
   }
 }

@@ -1,5 +1,5 @@
 /**
- * Project Endpoints Defined in this package
+ * 项目请求端点包，RESTful风格
  *
  * <p>Endpoints:
  *

@@ -1,8 +1,9 @@
 package com.acmedcare.framework.microservices.template.repository;
 
+import com.acmedcare.framework.exception.defined.RepositoryException;
 import com.acmedcare.framework.microservices.template.bean.Account;
-import com.acmedcare.framework.microservices.template.exception.RepositoryException;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * {@link AccountRepository} Methods Defined
@@ -10,7 +11,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author <a href="mailto:iskp.me@gmail.com">Elve.Xu</a>
  * @version ${project.version} - 2019-03-06.
  */
-@SuppressWarnings("unused")
+@Repository
 public interface AccountRepository extends BaseMapper<Account> {
 
   /**

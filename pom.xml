@@ -165,18 +165,6 @@
                 <type>pom</type>
             </dependency>
 
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>microservices-repository-api</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>microservices-repository-mybatis</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
             <!-- Spring Cloud Dependency  -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -288,6 +276,12 @@
                 <groupId>com.acmedcare.framework</groupId>
                 <artifactId>exception-api</artifactId>
                 <version>2.2.0-RC1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.acmedcare.framework</groupId>
+                <artifactId>commons-api</artifactId>
+                <version>2.1.0-RC1</version>
             </dependency>
 
             <!-- test -->

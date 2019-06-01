@@ -1,9 +1,10 @@
 package com.acmedcare.framework.microservices.template.response;
 
+import com.acmedcare.framework.common.SerializableBean;
 import com.acmedcare.framework.kits.BeanUtils;
 import com.acmedcare.framework.kits.jackson.JacksonDateFormat;
+import com.acmedcare.framework.microservices.template.Constants;
 import com.acmedcare.framework.microservices.template.bean.Account;
-import com.acmedcare.framework.microservices.template.common.Constants;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -11,7 +12,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -25,7 +25,7 @@ import java.util.Date;
 @Builder
 @ApiModel(description = "用户查询返回值")
 @AllArgsConstructor
-public class AccountResponse implements Serializable {
+public class AccountResponse extends SerializableBean {
 
   private static final long serialVersionUID = 7966948111148821592L;
 
@@ -44,10 +44,9 @@ public class AccountResponse implements Serializable {
   /**
    * 账户状态
    *
-   * <p>默认: 有效 {@link
-   * com.acmedcare.framework.microservices.template.common.Constants.AccountStatus#ENABLED}
+   * <p>默认: 有效 {@link Constants.AccountStatus#ENABLED}
    *
-   * @see com.acmedcare.framework.microservices.template.common.Constants.AccountStatus
+   * @see Constants.AccountStatus
    */
   @ApiModelProperty(value = "账户状态")
   private Constants.AccountStatus status = Constants.AccountStatus.ENABLED;

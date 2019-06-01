@@ -1,6 +1,7 @@
 package com.acmedcare.framework.microservices.template.bean;
 
-import com.acmedcare.framework.microservices.template.common.Constants;
+import com.acmedcare.framework.common.SerializableBean;
+import com.acmedcare.framework.microservices.template.Constants;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
@@ -8,7 +9,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -22,7 +22,7 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @TableName("acmedcare_account")
-public class Account implements Serializable {
+public class Account extends SerializableBean {
 
   private static final long serialVersionUID = -6625478147696736439L;
 
@@ -44,10 +44,9 @@ public class Account implements Serializable {
   /**
    * 账户状态
    *
-   * <p>默认: 有效 {@link
-   * com.acmedcare.framework.microservices.template.common.Constants.AccountStatus#ENABLED}
+   * <p>默认: 有效 {@link Constants.AccountStatus#ENABLED}
    *
-   * @see com.acmedcare.framework.microservices.template.common.Constants.AccountStatus
+   * @see Constants.AccountStatus
    */
   private Constants.AccountStatus status = Constants.AccountStatus.ENABLED;
 

@@ -1,11 +1,11 @@
 package com.acmedcare.framework.microservices.template.endpoint;
 
+import com.acmedcare.framework.exception.defined.BizServiceException;
+import com.acmedcare.framework.exception.defined.InvalidRequestParamException;
 import com.acmedcare.framework.exception.entity.EntityBody;
 import com.acmedcare.framework.kits.StringUtils;
 import com.acmedcare.framework.microservices.template.bean.Account;
-import com.acmedcare.framework.microservices.template.exception.BizException;
 import com.acmedcare.framework.microservices.template.common.log.LogDefined;
-import com.acmedcare.framework.microservices.template.endpoint.exception.InvalidRequestParameterException;
 import com.acmedcare.framework.microservices.template.endpoint.service.AccountService;
 import com.acmedcare.framework.microservices.template.response.AccountResponse;
 import io.swagger.annotations.*;
@@ -63,7 +63,7 @@ public class AccountEndpoint {
 
       // 参数检查
       if (StringUtils.isBlank(passport)) {
-        throw new InvalidRequestParameterException("请求参数['passport']不能为空");
+        throw new InvalidRequestParamException("请求参数['passport']不能为空");
       }
 
       // 业务执行
@@ -79,10 +79,10 @@ public class AccountEndpoint {
       return ResponseEntity.ok(accountResponse);
 
       // 异常处理
-    } catch (BizException e) {
+    } catch (BizServiceException e) {
       log.error("查询用户处理异常", e);
       return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(EntityBody.exception(e));
-    } catch (InvalidRequestParameterException e) {
+    } catch (InvalidRequestParamException e) {
       log.error("请求参数异常", e);
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(EntityBody.exception(e));
     } catch (Throwable e) {

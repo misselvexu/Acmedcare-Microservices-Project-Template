@@ -24,7 +24,7 @@
 
     <modules>
         <module>repository-api</module>
-        <module>repository-mybatis</module>
+        <module>repository-mybatis-support</module>
     </modules>
 
     <dependencyManagement>
@@ -37,7 +37,7 @@
 
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>microservices-repository-mybatis</artifactId>
+                <artifactId>microservices-repository-mybatis-support</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
