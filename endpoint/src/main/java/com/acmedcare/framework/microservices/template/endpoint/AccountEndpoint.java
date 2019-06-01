@@ -57,6 +57,7 @@ public class AccountEndpoint {
   ResponseEntity<?> queryAccount(
       @ApiParam(value = "通行证账号", required = true) @PathVariable("passport") String passport) {
 
+    // TODO: TRY CATCH BLOCK IS NOT MUST NEED
     try {
 
       log.info("请求获取用户详情, 请求参数:{} ", passport);
@@ -81,11 +82,11 @@ public class AccountEndpoint {
       // 异常处理
     } catch (BizServiceException e) {
       log.error("查询用户处理异常", e);
-      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(EntityBody.exception(e));
+      return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(EntityBody.exception(e));
     } catch (InvalidRequestParamException e) {
       log.error("请求参数异常", e);
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(EntityBody.exception(e));
-    } catch (Throwable e) {
+    } catch (Exception e) {
       log.error("异常", e);
       return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(EntityBody.exception(e));
     }
