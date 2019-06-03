@@ -274,6 +274,12 @@
 
             <dependency>
                 <groupId>com.acmedcare.framework</groupId>
+                <artifactId>spring-boot-starter-snowflake</artifactId>
+                <version>2.2.0-RC1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.acmedcare.framework</groupId>
                 <artifactId>exception-api</artifactId>
                 <version>2.2.0-RC1</version>
             </dependency>
