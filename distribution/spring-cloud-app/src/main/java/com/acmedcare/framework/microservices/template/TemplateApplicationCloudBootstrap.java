@@ -23,7 +23,7 @@ public class TemplateApplicationCloudBootstrap {
         .sources(TemplateApplicationCloudBootstrap.class)
 
         // default properties
-        .properties("spring.profiles.active=nacos")
+        .properties("spring.profiles.active=default,nacos")
         .web(WebApplicationType.SERVLET)
         .run(args);
   }
