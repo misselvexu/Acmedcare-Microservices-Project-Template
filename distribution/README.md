@@ -1,5 +1,6 @@
 ## Docker打包部署
 
+
 ### 环境准备
 
 > 配置企业内部`Docker Registry`
@@ -19,6 +20,8 @@
 
 ```
 
+----
+
 ### `pom.xml` 添加Docker打包插件
 
 ```xml
@@ -33,7 +36,7 @@
     <artifactId>docker-maven-plugin</artifactId>
     <version>0.4.13</version>
     <configuration>
-        <imageName>docker.apiacmed.com/library/${project.artifactId}:${project.version}</imageName>
+        <imageName>docker.apiacmed.com/acmedback/${project.artifactId}:${project.version}</imageName>
         <dockerDirectory>src/main/docker</dockerDirectory>
         <resources>
             <resource>
@@ -66,8 +69,42 @@
 </plugin>
 
 ```
+----
+
+### 项目`Nacos`服务发现配置
+
+#### 添加`Nacos`服务发现的依赖
+
+```xml
+
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+</dependency>
+
+```
+
+#### 添加`Nacos`服务发现的配置文件 `bootstrap-nacos.properties`
+
+```properties
 
 
+## Nacos Discovery Server
+spring.cloud.nacos.discovery.server-addr=nacos.acmedcare.com:8848
+
+## Nacos Config Server
+spring.cloud.nacos.config.server-addr=nacos.acmedcare.com:8848
+
+```
+
+#### 
+
+----
 ### 项目目录创建`Dockerfile`
 
 > 以下配置文件中 `microservices-spring-cloud-app` ，即为项目的 `artifactId`
@@ -98,6 +135,8 @@ CMD ["/microservices-spring-cloud-app/bin/startup.sh"]
 
 ```
 
+----
+
 ### 打包项目
 
 ```bash
@@ -121,9 +160,13 @@ docker push docker.apiacmed.com/acmedback/${项目名称}:${项目版本}
 
 ```
 
+----
+
 ### 登录指定的服务器进行容器启动
 
-> ssh ....
+> ssh xx.xx.xx.xx
+
+----
 
 ### 启动项目
 
