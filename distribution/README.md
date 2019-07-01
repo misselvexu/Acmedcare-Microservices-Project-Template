@@ -105,7 +105,7 @@ spring.cloud.nacos.config.server-addr=nacos.acmedcare.com:8848
 #### 
 
 ----
-### 项目目录创建`Dockerfile`
+### 项目目录`src/main/docker` 创建 `Dockerfile`
 
 > 以下配置文件中 `microservices-spring-cloud-app` ，即为项目的 `artifactId`
 
@@ -113,7 +113,7 @@ spring.cloud.nacos.config.server-addr=nacos.acmedcare.com:8848
 FROM docker.apiacmed.com/env/openjdk-acmed:8-jre-alpine
 MAINTAINER Elve.Xu <iskp.me@gmail.com>
 
-ENV VERSION 2.1.0.BUILD-SNAPSHOT
+ENV VERSION 2.1.1.BUILD-SNAPSHOT
 
 RUN echo "http://mirrors.aliyun.com/alpine/v3.6/main" > /etc/apk/repositories \
     && echo "http://mirrors.aliyun.com/alpine/v3.6/community" >> /etc/apk/repositories \
@@ -133,6 +133,15 @@ EXPOSE 19090
 
 CMD ["/microservices-spring-cloud-app/bin/startup.sh"]
 
+```
+
+### 项目目录`src/main/bin` 创建启动脚本`startup.sh` & `shutdown.sh`
+
+> 注意修改启动脚本中变量参数
+
+```bash
+SERVICE_NAME=microservices-spring-cloud-app   ### 修改为项目名称
+SERVICE_VERSION=2.1.1.BUILD-SNAPSHOT          ### 修改为项目版本
 ```
 
 ----
@@ -173,7 +182,7 @@ docker push docker.apiacmed.com/acmedback/${项目名称}:${项目版本}
 ```bash
 
 ## 启动命令模板
-docker run -p 19090:19090 \ 
+docker run -p 19090:19090 \
     --net docker-br0 --ip 172.172.1.117 \
     --add-host nacos.acmedcare.com:172.172.1.3 \ 
     --add-host mysql.acmedcare.com:172.172.1.101 \ 
@@ -187,7 +196,7 @@ docker run -p 19090:19090 \
 > 注意容器的`--ip`地址指定
 
 ## 示例
-docker run -p 19090:19090 \ 
+docker run -p 19090:19090 \
     --net docker-br0 --ip 172.172.1.117 \
     --add-host nacos.acmedcare.com:172.172.1.3 \ 
     --add-host mysql.acmedcare.com:172.172.1.101 \ 
@@ -196,7 +205,7 @@ docker run -p 19090:19090 \
     -d -v /tmp/logs:/tmp/logs \ 
     -v /tmp/logs/microservices-spring-cloud-app:/microservices-spring-cloud-app/logs \ 
     --name microservices-spring-cloud-app \ 
-    docker.apiacmed.com/acmedback/microservices-spring-cloud-app:2.2.0-RC1
+    docker.apiacmed.com/acmedback/microservices-spring-cloud-app:2.1.1.BUILD-SNAPSHOT
 
 
 
