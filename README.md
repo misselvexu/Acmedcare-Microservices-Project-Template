@@ -1,4 +1,4 @@
-<img src="doc/Acmedcare-Microservices-Project-Template-LOGO.png" width="128px" heigth="128px" alt=Acmedcare-DBM System Logo" />
+<img src="doc/Acmedcare-Microservices-Project-Template-LOGO.png" width="128px" heigth="128px" alt="Acmedcare+ System Logo" />
 
 ## Acmedcare+ Micro-services Template Project
 
